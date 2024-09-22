@@ -1,0 +1,59 @@
+CHRISTOPHER M. HORLICK
+Senior Software Engineer
+Madison, AL, USA
+Email: chorlick@gmail.com | Phone: 256-479-9562 | GitHub: github.com/chorlick
+
+Summary
+Senior Software Engineer with over 15 years of experience specializing in C++ and Qt application development. Expertise in designing and deploying cross-platform applications, user interface design with QML, and developing robust software systems. Proven ability to lead projects from concept to deployment, collaborate with cross-functional teams, and deliver high-quality, production-ready code. Seeking to contribute my skills to Performance Drone Works (PDW) and support the advancement of sUAS functional systems.
+
+Professional Experience
+C++ Senior Software Developer
+Global Payments, Inc. | Remote (Atlanta, GA) | Sep 2020 – Sep 2024
+- Developed and maintained high-performance C++ applications for payment processing systems.
+- Led the transition from SVN to Git, enhancing version control efficiency.
+- Automated deployment tasks using Python and Bash scripting.
+
+C++ and Qt Software Developer
+Geeks and Nerds | Huntsville, AL | Jan 2014 – Jan 2016
+- Developed Linux-based C++ and Qt applications for the Army Redstone Test Center (RTC).
+- Designed and implemented user interfaces using QML.
+- Managed code versioning with Git and issue tracking with Jira.
+
+Software Engineer
+Independent Contractor | Various Locations | Jan 2012 – Jan 2018
+- Completed C++ development projects in both application and kernel space.
+- Developed cross-platform applications with Qt and conducted hardware layout and microcontroller development.
+- Worked independently while maintaining clear communication with stakeholders.
+
+Software Engineer
+Pikewerks | Madison, AL | Jan 2009 – Jan 2010
+- Developed Linux kernel modules focusing on networking capabilities in C++.
+- Created rapid development tools using Python and PyQt.
+- Identified and addressed performance bottlenecks and security vulnerabilities.
+
+Education
+Ph.D. in Computer Engineering (In Progress)
+The University of Alabama in Huntsville | Sep 2022 – Present
+
+Master of Software Engineering
+Regis University | 2017
+
+Bachelor of Science in Computer Science
+Athens State University | 2014
+
+Skills
+Programming Languages: C++ (Expert), Python, Java, JavaScript, Bash, TypeScript
+Frameworks & Tools: Qt, QML, CMake, QMake, Git, Jira, REST APIs, JSON
+Development Practices: Cross-platform development, Embedded Linux, Android development, Code reviews, Unit testing
+Other Technologies: Build tools, Compiler configuration, Third-party libraries and APIs, Remote data integration
+
+Certifications & Achievements
+S3I Challenge Coin Recipient
+Awarded by the U.S. Military for outstanding team contributions.
+
+SAIC Fellow
+Mentored incoming students to develop industry-standard skills.
+
+Additional Information
+Security Clearance: Eligible under ITAR requirements; U.S. Citizen
+Passions: Software Craftsmanship, Artificial Intelligence, Cybersecurity, Drone Swarms
