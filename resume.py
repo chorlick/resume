@@ -6,16 +6,16 @@ import sys
 
 REQUIRED_PYTHON_VERSION = (3, 7)
 
-#this checks for the correct python version...this could be lower revision level
-#but we'd have to lose the dataclass features which are nice.
-if sys.version_info > REQUIRED_PYTHON_VERSION:
+# this checks for the correct python version...this could be lower revision level
+# but we'd have to lose the dataclass features which are nice.
+if sys.version_info < REQUIRED_PYTHON_VERSION:
     print("Python version {} or higher is required.".format(".".join(map(str, REQUIRED_PYTHON_VERSION))))
     print("Shoot an email to chorlick@gmail.com for a copy of his resume or see it here")
     print("https://github.com/chorlick/resume/blob/main/resume.txt")
     sys.exit(1)
 
 
-#simple class that encapsulates an Experience 
+# simple class that encapsulates an Experience
 @dataclass
 class Experience:
     title: str
@@ -24,27 +24,31 @@ class Experience:
     dates: str
     responsibilities: List[str]
 
-#simple class that encapsulates an Education 
+
+# simple class that encapsulates an Education
 @dataclass
 class Education:
     degree: str
     institution: str
     dates: str
 
-#simple class that encapsulates a SkillSection  
+
+# simple class that encapsulates a SkillSection
 @dataclass
 class SkillSection:
     category: str
     skills: List[str]
 
-#simple class that encapsulates an Certification section
+
+# simple class that encapsulates an Certification section
 @dataclass
 class Certification:
     title: str
     description: str
 
-#simple class that encapsulates a Resume. Resume's
-#are defined as lists of the above @dataclass objects
+
+# simple class that encapsulates a Resume. Resume's
+# are defined as lists of the above @dataclass objects
 @dataclass
 class Resume:
     name: str
@@ -57,13 +61,15 @@ class Resume:
     certifications: List[Certification] = field(default_factory=list)
     additional_info: dict = field(default_factory=dict)
 
-    #the main display function, this will print out the list information
-    #from the class
+    # the main display function, this will print out the list information
+    # from the class
     def display(self):
         print(f"{self.name}")
         print(f"{self.title}")
         print(f"{self.contact_info.get('Location')}")
-        print(f"Email: {self.contact_info.get('Email')} | Phone: {self.contact_info.get('Phone')} | GitHub: {self.contact_info.get('GitHub')}\n")
+        print(f"Email: {self.contact_info.get('Email')} | "
+              f"Phone: {self.contact_info.get('Phone')} | "
+              f"GitHub: {self.contact_info.get('GitHub')}\n")
         
         print("Summary")
         print(self.summary + "\n")
@@ -81,7 +87,7 @@ class Resume:
             print(f"{edu.degree}")
             print(f"{edu.institution} | {edu.dates}")
             print()
-        
+
         print("Skills")
         for skill_section in self.skills:
             print(f"{skill_section.category}: {', '.join(skill_section.skills)}")
@@ -97,9 +103,11 @@ class Resume:
             print(f"{key}: {value}")
         print()
 
-#main program entry point
+
+# main program entry point
 if __name__ == "__main__":
-    #instantiate a copy of the class with relevant info
+    
+    # instantiate a copy of the class with relevant info
     resume = Resume(
         name="CHRISTOPHER M. HORLICK",
         title="Senior Software Engineer",
@@ -109,12 +117,11 @@ if __name__ == "__main__":
             "GitHub": "github.com/chorlick",
             "Location": "Madison, AL, USA"
         },
-        summary=(
-            "Senior Software Engineer with over 15 years of experience specializing in C++ and Qt application development. "
-            "Expertise in designing and deploying cross-platform applications, user interface design with QML, and developing robust software systems. "
-            "Proven ability to lead projects from concept to deployment, collaborate with cross-functional teams, and deliver high-quality, production-ready code. "
-            "Seeking to contribute my skills to Performance Drone Works (PDW) and support the advancement of sUAS functional systems."
-        ),
+        summary=("""Senior Software Engineer with over 15 years of experience specializing in C++ and
+Qt application development. Expertise in designing and deploying cross-platform applications, user interface design
+with QML, and developing robust software systems. Proven ability to lead projects from concept to deployment,
+collaborate with cross-functional teams, and deliver high-quality, production-ready code. Seeking to contribute my
+skills to Performance Drone Works (PDW) and support the advancement of sUAS functional systems."""),
         experiences=[
             Experience(
                 title="C++ Senior Software Developer",
@@ -145,7 +152,8 @@ if __name__ == "__main__":
                 dates="Jan 2012 – Jan 2018",
                 responsibilities=[
                     "Completed C++ development projects in both application and kernel space.",
-                    "Developed cross-platform applications with Qt and conducted hardware layout and microcontroller development.",
+                    """Developed cross-platform applications with Qt and conducted hardware layout and
+microcontroller development.""",
                     "Worked independently while maintaining clear communication with stakeholders."
                 ]
             ),
@@ -189,11 +197,13 @@ if __name__ == "__main__":
             ),
             SkillSection(
                 category="Development Practices",
-                skills=["Cross-platform development", "Embedded Linux", "Android development", "Code reviews", "Unit testing"]
+                skills=["Cross-platform development", "Embedded Linux",
+                        "Android development", "Code reviews", "Unit testing"]
             ),
             SkillSection(
                 category="Other Technologies",
-                skills=["Build tools", "Compiler configuration", "Third-party libraries and APIs", "Remote data integration"]
+                skills=["Build tools", "Compiler configuration",
+                        "Third-party libraries and APIs", "Remote data integration"]
             )
         ],
         certifications=[
@@ -212,5 +222,5 @@ if __name__ == "__main__":
         }
     )
 
-    #...print
+    # ...print
     resume.display()

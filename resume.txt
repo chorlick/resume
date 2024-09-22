@@ -4,7 +4,11 @@ Madison, AL, USA
 Email: chorlick@gmail.com | Phone: 256-479-9562 | GitHub: github.com/chorlick
 
 Summary
-Senior Software Engineer with over 15 years of experience specializing in C++ and Qt application development. Expertise in designing and deploying cross-platform applications, user interface design with QML, and developing robust software systems. Proven ability to lead projects from concept to deployment, collaborate with cross-functional teams, and deliver high-quality, production-ready code. Seeking to contribute my skills to Performance Drone Works (PDW) and support the advancement of sUAS functional systems.
+Senior Software Engineer with over 15 years of experience specializing in C++ and
+Qt application development. Expertise in designing and deploying cross-platform applications, user interface design
+with QML, and developing robust software systems. Proven ability to lead projects from concept to deployment,
+collaborate with cross-functional teams, and deliver high-quality, production-ready code. Seeking to contribute my
+skills to Performance Drone Works (PDW) and support the advancement of sUAS functional systems.
 
 Professional Experience
 C++ Senior Software Developer
@@ -22,7 +26,8 @@ Geeks and Nerds | Huntsville, AL | Jan 2014 – Jan 2016
 Software Engineer
 Independent Contractor | Various Locations | Jan 2012 – Jan 2018
 - Completed C++ development projects in both application and kernel space.
-- Developed cross-platform applications with Qt and conducted hardware layout and microcontroller development.
+- Developed cross-platform applications with Qt and conducted hardware layout and
+microcontroller development.
 - Worked independently while maintaining clear communication with stakeholders.
 
 Software Engineer
