@@ -1,10 +1,13 @@
+#!/usr/bin/env python3
+
 from dataclasses import dataclass, field
 from typing import List
 import sys
 
+#field was added in 3.7/3.6 backport
 REQUIRED_PYTHON_VERSION = (3, 7)
 
-if sys.version_info < REQUIRED_PYTHON_VERSION:
+if sys.version_info > REQUIRED_PYTHON_VERSION:
     print("Python version {} or higher is required.".format(".".join(map(str, REQUIRED_PYTHON_VERSION))))
     print("Shoot an email to chorlick@gmail.com for a copy of his resume or see it here")
     print("https://github.com/chorlick/resume/resume.txt")
