@@ -4,16 +4,18 @@ from dataclasses import dataclass, field
 from typing import List
 import sys
 
-#field was added in 3.7/3.6 backport
 REQUIRED_PYTHON_VERSION = (3, 7)
 
+#this checks for the correct python version...this could be lower revision level
+#but we'd have to lose the dataclass features which are nice.
 if sys.version_info > REQUIRED_PYTHON_VERSION:
     print("Python version {} or higher is required.".format(".".join(map(str, REQUIRED_PYTHON_VERSION))))
     print("Shoot an email to chorlick@gmail.com for a copy of his resume or see it here")
-    print("https://github.com/chorlick/resume/resume.txt")
+    print("https://github.com/chorlick/resume/blob/main/resume.txt")
     sys.exit(1)
 
 
+#simple class that encapsulates an Experience 
 @dataclass
 class Experience:
     title: str
@@ -22,22 +24,27 @@ class Experience:
     dates: str
     responsibilities: List[str]
 
+#simple class that encapsulates an Education 
 @dataclass
 class Education:
     degree: str
     institution: str
     dates: str
 
+#simple class that encapsulates a SkillSection  
 @dataclass
 class SkillSection:
     category: str
     skills: List[str]
 
+#simple class that encapsulates an Certification section
 @dataclass
 class Certification:
     title: str
     description: str
 
+#simple class that encapsulates a Resume. Resume's
+#are defined as lists of the above @dataclass objects
 @dataclass
 class Resume:
     name: str
@@ -50,6 +57,8 @@ class Resume:
     certifications: List[Certification] = field(default_factory=list)
     additional_info: dict = field(default_factory=dict)
 
+    #the main display function, this will print out the list information
+    #from the class
     def display(self):
         print(f"{self.name}")
         print(f"{self.title}")
@@ -88,7 +97,9 @@ class Resume:
             print(f"{key}: {value}")
         print()
 
+#main program entry point
 if __name__ == "__main__":
+    #instantiate a copy of the class with relevant info
     resume = Resume(
         name="CHRISTOPHER M. HORLICK",
         title="Senior Software Engineer",
@@ -201,4 +212,5 @@ if __name__ == "__main__":
         }
     )
 
+    #...print
     resume.display()
