@@ -1,3 +1,5 @@
+[![Python application](https://github.com/chorlick/resume/actions/workflows/python-app.yml/badge.svg)](https://github.com/chorlick/resume/actions/workflows/python-app.yml)
+
 # Resume Generator
 
 A Python script that generates a professional resume based on your personal data. 
